@@ -480,16 +480,16 @@ Character sets:
 > This structure [inherits](/docs/nex/types#structure-inheritance) from [Data]
 {: .prompt-info }
 
-| Type     | Description |
-| -------- | ----------- |
-| Uint8    | Region      |
-| Uint8    | Country     |
-| Uint8    | Area        |
-| Uint8    | Language    |
-| Uint8    | Platform    |
-| Uint64   | Unknown     |
-| [String] | Unknown     |
-| [String] | Unknown     |
+| Type     | Description            |
+| -------- | ---------------------- |
+| Uint8    | Region                 |
+| Uint8    | Country                |
+| Uint8    | Area                   |
+| Uint8    | Language               |
+| Uint8    | Platform               |
+| Uint64   | Local friend code seed |
+| [String] | Console MAC address    |
+| [String] | Console serial number  |
 
 ### NintendoPresence ([Structure])
 > This structure [inherits](/docs/nex/types#structure-inheritance) from [Data]
@@ -507,6 +507,20 @@ Character sets:
 | [PID]                         | m_ownerPrincipalID     |
 | Uint32                        | m_joinGroupID          |
 | [Buffer]                      | m_applicationArg       |
+
+Change bit flags:
+
+| Flag                          | Description                             |
+| ----------------------------- | --------------------------------------- |
+| 1                             | [Game Key](#gamekey-structure) changed. |
+| 2                             | Game mode description changed.          |
+| 4                             | Join availability flag changed.         |
+| 8                             | Matchmake system type changed.          |
+| 16                            | Join game ID changed.                   |
+| 32                            | Join game mode changed.                 |
+| 64                            | Owner [PID] changed.                    |
+| 128                           | Join group ID changed.                  |
+| 256                           | Application argument changed.           |
 
 ### PlayedGame ([Structure])
 > This structure [inherits](/docs/nex/types#structure-inheritance) from [Data]
