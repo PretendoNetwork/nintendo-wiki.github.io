@@ -512,15 +512,15 @@ Change bit flags:
 
 | Flag                          | Description                             |
 | ----------------------------- | --------------------------------------- |
-| 1                             | [Game Key](#gamekey-structure) changed. |
-| 2                             | Game mode description changed.          |
-| 4                             | Join availability flag changed.         |
-| 8                             | Matchmake system type changed.          |
-| 16                            | Join game ID changed.                   |
-| 32                            | Join game mode changed.                 |
-| 64                            | Owner [PID] changed.                    |
-| 128                           | Join group ID changed.                  |
-| 256                           | Application argument changed.           |
+| 0x1                           | [Game Key](#gamekey-structure) changed. |
+| 0x2                           | Game mode description changed.          |
+| 0x4                           | Join availability flag changed.         |
+| 0x8                           | Matchmake system type changed.          |
+| 0x10                          | Join game ID changed.                   |
+| 0x20                          | Join game mode changed.                 |
+| 0x40                          | Owner [PID] changed.                    |
+| 0x80                          | Join group ID changed.                  |
+| 0x100                         | Application argument changed.           |
 
 ### PlayedGame ([Structure])
 > This structure [inherits](/docs/nex/types#structure-inheritance) from [Data]
